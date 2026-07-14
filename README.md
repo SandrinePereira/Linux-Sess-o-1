@@ -208,4 +208,4 @@ O servidor executa um sistema Linux (Ubuntu) e disponibiliza serviços de admini
 
 A imagem abaixo contém as respostas às questões teóricas do exercício.
 
-![Questões Respondidas](image(4).png)
+![Questões Respondidas](image_1.png)
