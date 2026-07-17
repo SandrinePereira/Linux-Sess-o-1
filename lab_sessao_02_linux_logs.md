@@ -1,110 +1,116 @@
+# SKODJI DIGITAL — MOD.XX.YY.ZZ
 
+# Laboratório — Sessão 2
+## Auditoria de Sistemas Linux e Análise Avançada de Logs
 
-Laboratório — Sessão 2
-Auditoria de Sistemas Linux e Análise Avançada de Logs
+| Informação | Detalhes |
+|------------|----------|
+| **Curso** | Reskilling |
+| **Módulo** | Linux e Cibersegurança |
+| **Objetivo de Aprendizagem** | OA2 – Avaliar |
+| **Duração da Prática Guiada** | 19:15 – 20:50 |
+| **Formador** | Péricles Borges |
 
-Curso: Reskilling  |  Módulo: Linux e Cibersegurança
+---
 
+# Contexto
 
+Um servidor da infraestrutura foi alvo de conexões anómalas. Atuará como analista forense para determinar a origem e o sucesso do ataque, com base na análise de logs de autenticação.
 
+---
 
+# Ambiente Virtual
 
-Ambiente Virtual
+- **TryHackMe – Intro to Logs (Gratuito)**  
+  https://tryhackme.com/room/introtologs
 
-TryHackMe Intro to Logs (Gratuito): https://tryhackme.com/room/introtologs
+- **TryHackMe – Linux Server Forensics (Gratuito)**  
+  https://tryhackme.com/room/linuxserverforensics
 
-TryHackMe Linux Server Forensics (Gratuito): https://tryhackme.com/room/linuxserverforensics
+---
 
+# Tarefas a Executar
 
+- [ ] Aceder ao laboratório **Intro to Logs** para compreender a mecânica dos registos do sistema.
 
+- [ ] No laboratório **Linux Server Forensics**, navegar até à diretoria de logs do servidor comprometido.
 
+```bash
+cd /var/log/
+```
 
+---
 
+- [ ] Isolar tentativas falhadas de login.
 
-Tarefas a Executar
+```bash
+grep "Failed password" auth.log
+```
 
-☐  Aceder ao laboratório Intro to Logs para compreender a mecânica dos registos do sistema.
+---
 
-☐  No laboratório Linux Server Forensics, navegar até à diretoria de logs do servidor comprometido:
+- [ ] Extrair e contar quais os IPs que mais tentaram autenticar-se no sistema.
 
+```bash
+grep "Failed password" auth.log | awk '{print $11}' | sort | uniq -c | sort -nr
+```
 
+---
 
+- [ ] Identificar se o atacante obteve sucesso.
 
+```bash
+grep -E "Accepted password|Accepted publickey" auth.log
+```
 
+---
 
+# Critérios de Entrega
 
+Documente os seguintes pontos diretamente no seu portfólio.
 
+## 1. IP do atacante
 
+```text
+10.129.176.64
+```
 
+---
 
-☐  Isolar tentativas falhadas de login:
+## 2. Hora exata do comprometimento (Timestamp)
 
+```text
+Jul 17 14:08:09
+```
 
+---
 
+## 3. Utilizador afetado
 
+```text
+fred
+```
 
+---
 
+## 4. Linha temporal do ataque
 
+| Hora | Evento |
+|------|--------|
+| **14:07:51** | Tentativa falhada. O atacante tenta autenticar-se via SSH com o utilizador **fred** a partir do IP **10.129.176.64** (porta **57072**), resultando em **Failed password**. |
+| **14:08:09** | Sucesso (Comprometimento). Apenas **18 segundos** após a falha, o atacante consegue autenticar-se com sucesso (**Accepted password**) mantendo a mesma sessão/porta de origem. |
+| **14:47:36** | Novo acesso. O mesmo atacante estabelece uma nova ligação SSH bem-sucedida para o utilizador **fred**, utilizando a porta de origem **44460**. |
 
+---
 
-☐  Extrair e contar quais os IPs que mais tentaram autenticar-se no sistema:
+# Checklist de Submissão (Portfólio GitHub)
 
+- [ ] Criar ou atualizar o ficheiro **sessao-02/README.md**.
+- [ ] Incluir os excertos relevantes extraídos dos logs analisados.
+- [ ] Efetuar o **commit** e o **push** das alterações para o repositório remoto.
 
+---
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-☐  Identificar se o atacante obteve sucesso:
-
-
-
-Critérios de Entrega
-
-Deve documentar os seguintes pontos diretamente no seu portfólio:
-
-O IP do atacante identificado.
-
-[IP: 10.129.176.64]
-
-A hora exata do comprometimento (timestamp).
-
-[Timestamp: Jul 17 14:08:09]
-
-
-
-O utilizador afetado.
-
-[Utilizador: fred]
-
-
-
-Uma breve linha temporal do ataque (tentativas falhadas → sucesso).
-
-[14:07:51 — Tentativa Falhada: O atacante tenta autenticar-se via SSH com o utilizador fred a partir do IP 10.129.176.64 (porta 57072), resultando em erro (Failed password).
-
- 14:08:09 — Sucesso (Comprometimento): Apenas 18 segundos após a falha, o atacante consegue acertar na palavra-passe e obtém acesso bem-sucedido ao sistema (Accepted password) mantendo a mesma sessão/porta de origem.
-
- 14:47:36 — Novo Acesso: O mesmo atacante estabelece uma nova ligação SSH bem-sucedida para o utilizador fred, desta vez utilizando a porta de origem 44460]
-
-
-
-Checklist de Submissão (Portfólio GitHub)
-
-☐  Criar ou atualizar o ficheiro sessao-02/README.md (formato Markdown) com todos os resultados documentados.
-
-☐  Incluir os excertos relevantes extraídos dos logs analisados.
-
-☐  Efetuar o commit e o push das alterações para o repositório remoto do portfólio.
-
-Percurso Reskilling — Linux e Cibersegurança  |  SKODJI DIGITAL  |  Documento de Apoio ao Aluno
+> **Percurso Reskilling — Linux e Cibersegurança**  
+> **SKODJI DIGITAL**  
+> Documento de Apoio ao Aluno
