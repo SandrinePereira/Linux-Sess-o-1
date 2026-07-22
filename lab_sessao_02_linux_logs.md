@@ -106,7 +106,13 @@ fred
 
 A imagem abaixo contém as respostas às questões teóricas do exercício.
 
-![Questões Respondidas](1 - Navegacao logs.png)
+![Questões Respondidas](1_Navegacaologs.PNG)
+
+![Questões Respondidas](2_Autenticacaofalhada.PNG)
+
+![Questões Respondidas](3_IPquetentouauthenticar.PNG)
+
+![Questões Respondidas](4_Sucessoatacante.PNG)
  
 # Checklist de Submissão (Portfólio GitHub)
 
