@@ -102,7 +102,12 @@ fred
 | **14:47:36** | Novo acesso. O mesmo atacante estabelece uma nova ligação SSH bem-sucedida para o utilizador **fred**, utilizando a porta de origem **44460**. |
 
 ---
+# Evidência
 
+A imagem abaixo contém as respostas às questões teóricas do exercício.
+
+![Questões Respondidas](1 - Navegacao logs.png)
+ 
 # Checklist de Submissão (Portfólio GitHub)
 
 - [ ] Criar ou atualizar o ficheiro **sessao-02/README.md**.
