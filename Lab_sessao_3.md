@@ -19,29 +19,29 @@ TryHackMe Network Security Essentials (Gratuito): https://tryhackme.com/room/net
  
 
 ☐ Verificar o estado atual do UFW:
-
+![Questões Respondidas](1_StatusServidor.PNG)
 
 
 
 
 ☐ Alterar as políticas padrão - bloquear entrada, permitir saída:
-
+![Questões Respondidas](2_Alterarpoliticaspadrao.PNG)
 
 
 
 
 ☐ Criar uma regra específica para permitir acesso SSH apenas na porta padrão:
-
+![Questões Respondidas](3_AcessoSSHporta22.PNG)
 
 
 
 
 ☐ Simular o bloqueio de um IP malicioso fictício na chain INPUT do iptables:
-
+![Questões Respondidas](4_bloqueioIPmalicioso.PNG)
 
 
 ☐ Guardar o estado permanente/persistente do iptables:
-
+![Questões Respondidas](5_Estadoiptables.PNG)
 
 
 3. Critérios de Entrega
@@ -49,11 +49,11 @@ TryHackMe Network Security Essentials (Gratuito): https://tryhackme.com/room/net
 Devem ser documentados os seguintes elementos no seu portfólio individual:
 
 Captura de ecrã ou output de texto das regras UFW ativas: sudo ufw status verbose
-
+![Questões Respondidas](6_RegrasUFWativas.PNG)
 
 
 Listagem completa de regras do iptables: sudo iptables -L –v
-
+![Questões Respondidas](7_RegrasIptables.PNG)
 
 
 
