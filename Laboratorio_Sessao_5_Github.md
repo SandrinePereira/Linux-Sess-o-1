@@ -81,4 +81,4 @@ Execução de um exame de auditoria técnica automatizada para identificar desvi
 
 - **Medida Corretiva:** Montar o diretório `/tmp` numa partição individual ou utilitário tmpfs dedicado (com opções de montagem seguras como `nodev`, `nosuid` e `noexec`). Isso evita que um preenchimento malicioso ou acidental de ficheiros temporários esgote o espaço da partição raiz (`/`), prevenindo ataques de
 
-> ⚠️ **Nota:** o documento original termina aqui — o parágrafo final está incompleto no ficheiro `.docx` de origem.
+
