@@ -29,7 +29,7 @@ Execução de um exame de auditoria técnica automatizada para identificar desvi
   sudo apt update && sudo apt install lynis -y
   ```
 
-  ![](media/image1.png)
+  ![](1_Lab5_InstalarLynis.PNG)
 
 - [ ] Iniciar a auditoria completa do sistema operativo:
 
