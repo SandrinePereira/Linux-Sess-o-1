@@ -37,7 +37,7 @@ Execução de um exame de auditoria técnica automatizada para identificar desvi
   sudo lynis audit system
   ```
 
-  ![](media/image2.png)
+  ![](2_Lab5_AuditoriaSystemOperativo.PNG)
 
 - [ ] Aguardar a conclusão do processo e analisar minuciosamente o output exibido no terminal
 
@@ -45,11 +45,11 @@ Execução de um exame de auditoria técnica automatizada para identificar desvi
 
   - O Hardening Score inicial
 
-    ![](media/image3.png)
+    ![](3_Lab5_HardeningScoreInicial.PNG)
 
   - A quantidade de Warnings encontradas
 
-    ![](media/image4.png)
+    ![](4_Lab5_Warning.PNG)
 
     > Warning [PKGS-7392]: Um ou mais pacotes instalados no sistema possuem vulnerabilidades conhecidas.
     >
@@ -57,7 +57,7 @@ Execução de um exame de auditoria técnica automatizada para identificar desvi
 
   - A quantidade de Suggestions encontradas
 
-    ![](media/image5.png)
+    ![](5_Lab5_Suggestions.PNG)
 
 - [ ] Escolher 2 Suggestions críticas apresentadas na área de Authentication ou Filesystem e pesquisar a correção recomendada (base de dados Cisofy)
 
