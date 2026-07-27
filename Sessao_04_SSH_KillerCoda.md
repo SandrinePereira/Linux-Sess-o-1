@@ -36,49 +36,38 @@ Proteger o canal de gestão remota do servidor Ubuntu, eliminando a autenticaç�
 
 Comando: ssh-keygen -t ed25519
 
-![](media/image3.png){width="6.5in" height="2.7555555555555555in"}
+> ![Questões Respondidas](2_Lab4_CriarChaves.PNG)
 
 ☐ Transferir a chave pública para o servidor alvo:\
 Comando: ssh-copy-id \<utilizador\>@\<IP_DO_SERVIDOR\>
 
-![](media/image4.png){width="3.0208333333333335in" height="0.4791666666666667in"}
+> ![Questões Respondidas](3_Lab4_TransferirChaves.PNG)
 
-![](media/image5.png){width="6.5in" height="2.245833333333333in"}
 
 > ☐ Editar o ficheiro de configuração do daemon SSH com privilégios de superutilizador:\
 > Comando: sudo nano /etc/ssh/sshd_config
->
+
 > ☐ Aplicar e garantir as seguintes alterações estruturais no ficheiro:\
 > • PermitRootLogin no\
 > • PasswordAuthentication no\
 > • Port 2222
->
-> .
->
-> ![](media/image6.png){width="6.5in" height="3.1847222222222222in"}
+> 
+> ![Questões Respondidas](4_Lab4_ConfiguraçaoDaemonSSH.PNG)
 >
 > ☐ Validar a sintaxe de todas as alterações efetuadas antes de reiniciar o serviço:\
 > Comando: sudo sshd --t
 >
-> ![](media/image7.png){width="4.78125in" height="0.5416666666666666in"}
+> ![Questões Respondidas](5_Lab4_ValidacaoAntesReiniciar.PNG)
 >
 > ☐ Reiniciar o serviço SSH para aplicar as novas diretivas:\
 > Comando: sudo systemctl restart sshd
 >
-> ![](media/image8.png){width="4.322916666666667in" height="0.4895833333333333in"}
->
-> ![](media/image9.png){width="5.322916666666667in" height="0.4791666666666667in"}
+> ![Questões Respondidas](6_Lab4_ReiniciarSSH.PNG)
 >
 > ☐ Num novo terminal (sem fechar o atual), testar o acesso completo via chave privada e nova porta:\
 > Comando: ssh -i \<caminho_da_chave\> -p 2222 \<utilizador\>@\<IP\>
 
-![](media/image10.png){width="6.5in" height="0.4888888888888889in"}
-
-![](media/image11.png){width="6.5in" height="2.5791666666666666in"}
-
-![](media/image12.png){width="6.5in" height="0.5493055555555556in"}
-
-![](media/image13.png){width="6.5in" height="0.5555555555555556in"}
+> ![Questões Respondidas](7_Lab4_AcessoViaChavePrivada.PNG)
 
 **4. Critérios de Entrega**
 
