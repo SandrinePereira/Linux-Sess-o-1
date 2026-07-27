@@ -18,7 +18,11 @@ Fase 1 – Identificação e Triagem
 
 ss –tuln
 
+![Questões Respondidas](1_Lab6_PortasAbertas.PNG)
+
 nmap -sV localhost
+
+![Questões Respondidas](2_Lab6_VarreduraLocal.PNG)
 
 Não há conexão com internet, Não consigo instalar nmap
 
