@@ -29,7 +29,7 @@ Execução de um exame de auditoria técnica automatizada para identificar desvi
   sudo apt update && sudo apt install lynis -y
   ```
 
-  ![](media/image1.png)
+  ![](1_Lab5_InstalarLynis.PNG)
 
 - [ ] Iniciar a auditoria completa do sistema operativo:
 
@@ -37,7 +37,7 @@ Execução de um exame de auditoria técnica automatizada para identificar desvi
   sudo lynis audit system
   ```
 
-  ![](media/image2.png)
+  ![](2_Lab5_AuditoriaSystemOperativo.PNG)
 
 - [ ] Aguardar a conclusão do processo e analisar minuciosamente o output exibido no terminal
 
@@ -45,11 +45,11 @@ Execução de um exame de auditoria técnica automatizada para identificar desvi
 
   - O Hardening Score inicial
 
-    ![](media/image3.png)
+    ![](3_Lab5_HardeningScoreInicial.PNG)
 
   - A quantidade de Warnings encontradas
 
-    ![](media/image4.png)
+    ![](4_Lab5_Warning.PNG)
 
     > Warning [PKGS-7392]: Um ou mais pacotes instalados no sistema possuem vulnerabilidades conhecidas.
     >
@@ -57,7 +57,7 @@ Execução de um exame de auditoria técnica automatizada para identificar desvi
 
   - A quantidade de Suggestions encontradas
 
-    ![](media/image5.png)
+    ![](5_Lab5_Suggestions.PNG)
 
 - [ ] Escolher 2 Suggestions críticas apresentadas na área de Authentication ou Filesystem e pesquisar a correção recomendada (base de dados Cisofy)
 
@@ -81,4 +81,4 @@ Execução de um exame de auditoria técnica automatizada para identificar desvi
 
 - **Medida Corretiva:** Montar o diretório `/tmp` numa partição individual ou utilitário tmpfs dedicado (com opções de montagem seguras como `nodev`, `nosuid` e `noexec`). Isso evita que um preenchimento malicioso ou acidental de ficheiros temporários esgote o espaço da partição raiz (`/`), prevenindo ataques de
 
-> ⚠️ **Nota:** o documento original termina aqui — o parágrafo final está incompleto no ficheiro `.docx` de origem.
+
