@@ -29,7 +29,7 @@ Proteger o canal de gestão remota do servidor Ubuntu, eliminando a autenticaç�
 
 > ☐ Criar um novo utilizador de teste no sistema e configurar o ambiente para aceitar chaves.
 >
-> ![](1_Lab4_CriarUtilizador.PNG)
+> ![Questões Respondidas](1_Lab4_CriarUtilizador.PNG)
 >
 
 ☐ Gerar um par de chaves Ed25519 robustas:
